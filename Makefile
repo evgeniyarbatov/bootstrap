@@ -31,4 +31,4 @@ dirs:
 	@mkdir -p $(NOTEBOOKS)
 	@mkdir -p $(SCRIPTS)
 
-.PHONY: gpx venv jupyter dirs
+.PHONY: gitignore venv install jupyter dirs
