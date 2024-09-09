@@ -10,7 +10,7 @@ PYTHON_GITIGNORE = https://raw.githubusercontent.com/github/gitignore/main/Pytho
 all: gitignore venv install jupyter dirs
 
 gitignore:
-	wget -q $(PYTHON_GITIGNORE) -O .gitignore
+	@wget -q $(PYTHON_GITIGNORE) -O .gitignore
 
 venv:
 	@python3 -m venv $(VENV_PATH)
