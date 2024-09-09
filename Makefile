@@ -2,9 +2,10 @@ PROJECT_NAME := $(shell basename $(PWD))
 
 VENV_PATH = ~/.venv/$(PROJECT_NAME)
 
-NOTEBOOKS_DIR = notebooks
+NOTEBOOKS = notebooks
+SCRIPTS = scripts
 
-all: venv install jupyter
+all: venv install jupyter dirs
 
 venv:
 	@python3 -m venv $(VENV_PATH)
@@ -21,6 +22,7 @@ jupyter:
 	--display-name "$(PROJECT_NAME)"
 
 dirs:
-    @mkdir -p $(notebooks)
+	@mkdir -p $(NOTEBOOKS)
+	@mkdir -p $(SCRIPTS)
 
 .PHONY: gpx venv jupyter dirs
