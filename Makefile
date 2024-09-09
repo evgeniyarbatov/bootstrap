@@ -19,7 +19,7 @@ install: venv
 	@source $(VENV_PATH)/bin/activate && \
 	pip install --disable-pip-version-check -q -r requirements.txt
 
-jupyter: venv
+jupyter: install
 	@source $(VENV_PATH)/bin/activate && \
 	python3 -m ipykernel install \
 	--user \
