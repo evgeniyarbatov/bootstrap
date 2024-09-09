@@ -20,7 +20,7 @@ jupyter:
 	--user \
 	--name "$(PROJECT_NAME)" \
 	--display-name "$(PROJECT_NAME)" \
-	> /dev/null
+	> /dev/null 2>&1
 
 dirs:
 	@mkdir -p $(NOTEBOOKS)
