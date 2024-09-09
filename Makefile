@@ -19,7 +19,8 @@ jupyter:
 	python3 -m ipykernel install \
 	--user \
 	--name "$(PROJECT_NAME)" \
-	--display-name "$(PROJECT_NAME)"
+	--display-name "$(PROJECT_NAME)" \
+	> /dev/null
 
 dirs:
 	@mkdir -p $(NOTEBOOKS)
