@@ -5,7 +5,12 @@ VENV_PATH = ~/.venv/$(PROJECT_NAME)
 NOTEBOOKS = notebooks
 SCRIPTS = scripts
 
-all: venv install jupyter dirs
+PYTHON_GITIGNORE = https://raw.githubusercontent.com/github/gitignore/main/Python.gitignore
+
+all: gitignore venv install jupyter dirs
+
+gitignore:
+	wget $(PYTHON_GITIGNORE) -O .gitignore
 
 venv:
 	@python3 -m venv $(VENV_PATH)
